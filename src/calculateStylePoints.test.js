@@ -10,6 +10,14 @@ describe.only('calculateStylePoints', () => {
 		assert.equal(actual, expected);
 	});
 
+	it('should return 57.5', () => {
+		const actual = calculateStylePoints([19, 20, 19.5, 19, 18.5]);
+
+		const expected = '57.5';
+
+		assert.equal(actual, expected);
+	});
+	
 	it('should return 57', () => {
 		const actual = calculateStylePoints([19, 19.5, 19, 19, 19]);
 
@@ -18,11 +26,4 @@ describe.only('calculateStylePoints', () => {
 		assert.equal(actual, expected);
 	});
 
-	it('should return 57.5', () => {
-		const actual = calculateStylePoints([19, 20, 19.5, 19, 18.5]);
-
-		const expected = '57.5';
-
-		assert.equal(actual, expected);
-	});
 });
